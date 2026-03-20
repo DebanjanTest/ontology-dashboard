@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Global Ontology Engine</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Global Ontology Engine — India-Centric Intelligence</h1>
+    <div id="nvi">NVI: --</div>
+  </header>
+
+  <main>
+    <section class="panel wide">
+      <h2>1) Live Intelligence Graph</h2>
+      <div id="graph"></div>
+    </section>
+
+    <section class="panel">
+      <h2>2) Global Risk Dashboard</h2>
+      <div id="riskCards" class="cards"></div>
+    </section>
+
+    <section class="panel">
+      <h2>3) Live Feed Monitor</h2>
+      <div id="feed" class="feed"></div>
+      <h3>Source Latency</h3>
+      <div id="latency" class="latency"></div>
+    </section>
+
+    <section class="panel">
+      <h2>4) Natural Language Query</h2>
+      <div class="row">
+        <input id="q" placeholder="e.g. top 5 risks India" />
+        <button id="askBtn">Ask</button>
+      </div>
+      <pre id="qOut"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>5) Cascade Risk Analyzer</h2>
+      <div class="row">
+        <input id="startNode" placeholder="e.g. event_lac" value="event_lac" />
+        <button id="cascadeBtn">Analyze Cascade</button>
+      </div>
+      <pre id="cascadeOut"></pre>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
