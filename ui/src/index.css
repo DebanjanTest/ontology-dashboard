@@ -310,6 +310,11 @@ body,
   .dashboard-body > div > div > div[style*="display: grid"] {
     grid-template-columns: 1fr !important;
   }
+
+  /* Login / Register Pages Overflow Fix */
+  div[style*="grid-template-columns: 360px 440px"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -333,5 +338,19 @@ body,
   .bottomCard {
     border-right: none !important;
     border-bottom: 1px solid var(--border);
+  }
+
+  /* Reduce crushing padding down to mobile sizes on Auth pages */
+  div[style*="padding: 48px 40px"],
+  div[style*="padding: 48px 36px"] {
+    padding: 24px 20px !important;
+  }
+
+  /* Allow top auth bar to wrap */
+  div[style*="padding: 14px 32px"] {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 12px !important;
+    padding: 14px 16px !important;
   }
 }
