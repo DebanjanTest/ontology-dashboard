@@ -27,8 +27,10 @@ except Exception:
 
 load_dotenv()
 
-# Vercel Postgres sets POSTGRES_URL by default, fallback to DATABASE_URL, then local SQLite
-raw_db_url = os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./ontology.db")
+# Vercel filesystem is read-only, except for /tmp. If no Postgres DB is set, put SQLite in /tmp.
+is_vercel = os.getenv("VERCEL") == "1"
+default_db = "sqlite+aiosqlite:////tmp/ontology.db" if is_vercel else "sqlite+aiosqlite:///./ontology.db"
+raw_db_url = os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL", default_db)
 
 # Force the asyncpg driver for PostgreSQL to ensure SQLAlchemy async compatibility
 if raw_db_url.startswith("postgres://"):
