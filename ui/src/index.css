@@ -204,3 +204,134 @@ body,
   margin-bottom: 10px;
   transition: color 0.3s;
 }
+
+/* ==========================================================================
+   Responsive UI Overrides for Mobile & Tablet Adaptation
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* Release global fixed constraints */
+  .dashboard-wrapper {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+  
+  .main-content {
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+  
+  /* Topbar modifications */
+  .dashboard-wrapper > div[style*="height: 52px"] {
+    flex-wrap: wrap;
+    height: auto !important;
+    padding: 12px !important;
+    justify-content: center !important;
+    gap: 12px;
+  }
+  .dashboard-wrapper > div[style*="height: 52px"] > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+  /* Sidebar modifications */
+  .sidebar {
+    width: 100% !important;
+    min-width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    padding: 16px !important;
+  }
+  
+  .sidebar nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navItem {
+    flex: 1 1 calc(33.333% - 10px);
+    justify-content: center;
+    border-left: none !important;
+    border-bottom: 3px solid transparent;
+  }
+
+  .navItem.active {
+    border-left: none !important;
+    border-bottom: 3px solid var(--accent-teal);
+  }
+
+  /* Body & Widgets */
+  .dashboard-body {
+    overflow-y: visible !important;
+    padding: 12px !important;
+  }
+
+  /* Force top level layout divs to wrap their columns */
+  .dashboard-body > div[style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Map and graph panels */
+  .top-widgets {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .detail-panel {
+    width: 100% !important;
+    margin-top: 16px;
+  }
+
+  .bottom-widgets {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  /* Any component hardcoding heavy widths */
+  div[style*="width: 280px"],
+  div[style*="width: 300px"],
+  div[style*="width: 380px"],
+  div[style*="width: 400px"] {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Scrollable tables */
+  div[style*="overflow-y: auto"],
+  div[style*="overflowY: auto"] {
+    overflow-x: auto !important;
+  }
+
+  /* Feed Monitor grids */
+  .dashboard-body > div > div > div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Smaller screens */
+  .navItem {
+    flex: 1 1 calc(50% - 10px);
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .dashboard-body {
+    padding: 10px !important;
+    gap: 12px !important;
+  }
+
+  h2 {
+    font-size: 16px !important;
+  }
+
+  /* Cards stacking */
+  .bottomCard {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+}

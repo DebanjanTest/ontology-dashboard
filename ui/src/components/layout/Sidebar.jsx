@@ -9,6 +9,7 @@ import {
     Settings,
     HelpCircle
 } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 const NAV_ITEMS = [
     { label: 'Intelligence Graph', path: '/graph', icon: BrainCircuit },
@@ -23,32 +24,33 @@ const NAV_ITEMS = [
 
 export default function Sidebar({ className, activePage }) {
     const navigate = useNavigate();
+    const { theme: t } = useTheme();
 
     return (
-        <div className={`sidebar ${className || ''}`} style={{ width: '220px', minWidth: '220px' }}>
+        <div className={`sidebar ${className || ''}`} style={{ width: '220px', minWidth: '220px', background: t.bgSidebar }}>
             {/* Brand Name */}
             <div style={{ padding: '0 20px', marginBottom: '16px', flexShrink: 0 }}>
-                <h2 style={{ fontFamily: 'Orbitron, sans-serif', fontSize: '15px', fontWeight: '700', color: '#1a1a2e', letterSpacing: '0.05em', margin: 0 }}>
+                <h2 style={{ fontFamily: 'Orbitron, sans-serif', fontSize: '15px', fontWeight: '700', color: t.text, letterSpacing: '0.05em', margin: 0 }}>
                     SII COMMAND
                 </h2>
             </div>
 
             {/* Fix 5 — Sidebar "SYSTEM ACTIVE" indicator */}
-            <div style={{ padding: '0 16px 12px 16px', borderBottom: '1px solid #e5e7eb', marginBottom: '8px' }}>
+            <div style={{ padding: '0 16px 12px 16px', borderBottom: `1px solid ${t.border}`, marginBottom: '8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
                     <div style={{
                         width: '8px', height: '8px', borderRadius: '50%',
-                        background: '#22c55e',
-                        boxShadow: '0 0 6px #22c55e'
+                        background: t.success,
+                        boxShadow: `0 0 6px ${t.success}`
                     }} />
-                    <span style={{ fontSize: '11px', fontWeight: '600', color: '#1a1a2e' }}>SYSTEM ACTIVE</span>
+                    <span style={{ fontSize: '11px', fontWeight: '600', color: t.text }}>SYSTEM ACTIVE</span>
                 </div>
-                <div style={{ fontSize: '10px', color: '#9ca3af', paddingLeft: '14px' }}>LIVE_FEED.v4.2</div>
+                <div style={{ fontSize: '10px', color: t.textMuted, paddingLeft: '14px' }}>LIVE_FEED.v4.2</div>
             </div>
 
             <nav style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '2px' }}>
                 {NAV_ITEMS.map((item, idx) => {
-                    if (item.spacer) return <div key={`spacer-${idx}`} style={{ borderTop: '1px solid #e5e7eb', margin: '16px 0' }} />;
+                    if (item.spacer) return <div key={`spacer-${idx}`} style={{ borderTop: `1px solid ${t.border}`, margin: '16px 0' }} />;
 
                     const Icon = item.icon;
                     const isActive = activePage === item.label;
