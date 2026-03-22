@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import TopBar from '../components/layout/TopBar';
-import Sidebar from '../components/layout/Sidebar';
+import DashboardLayout from '../components/layout/DashboardLayout';
 import StatusBar from '../components/layout/StatusBar';
 import WorldMapSVG from '../components/map/WorldMapSVG';
 import { useBilateralData } from '../hooks/useBilateral';
 import ALL_COUNTRIES from '../data/countries';
+import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LabelList } from 'recharts';
 import CountryStatsTable from '../components/CountryStatsTable';
 import { useTheme } from '../context/ThemeContext';
@@ -24,22 +24,18 @@ export default function RiskDashboard() {
     }, [primary, comparison, availableCountries]);
 
     return (
-        <div className="dashboard-wrapper">
-            <TopBar activeNav="DASHBOARD" />
-            <div className="main-content">
-                <Sidebar activePage="Comparison Dashboard" />
+        <DashboardLayout activeNav="DASHBOARD" activePage="Comparison Dashboard">
+            <main className="dashboard-body" style={{ background: t.bg, padding: '24px' }}>
 
-                <main className="dashboard-body" style={{ background: t.bg, padding: '24px' }}>
-
-                    <h1 style={{
-                        fontSize: '28px',
-                        fontWeight: '700',
-                        color: t.text,
-                        fontFamily: 'Syne, sans-serif',
-                        marginBottom: '20px'
-                    }}>
-                        Bilateral Sectoral Comparison Dashboard
-                    </h1>
+                <h1 style={{
+                    fontSize: '28px',
+                    fontWeight: '700',
+                    color: t.text,
+                    fontFamily: 'Syne, sans-serif',
+                    marginBottom: '20px'
+                }}>
+                    Bilateral Sectoral Comparison Dashboard
+                </h1>
 
                     {/* Component 1: Country Selector Bar */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '24px' }}>
@@ -87,7 +83,10 @@ export default function RiskDashboard() {
 
                         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-                            <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
+                            <motion.div 
+                                whileHover={{ y: -4, boxShadow: '0 12px 24px rgba(0,0,0,0.1)' }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                                style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
                                 <h3 style={{ fontSize: '15px', fontWeight: '500', marginBottom: '20px', color: t.text, fontFamily: 'Syne' }}>
                                     Bilateral Sectoral Comparison Analysis
                                 </h3>
@@ -131,9 +130,12 @@ export default function RiskDashboard() {
                                         </BarChart>
                                     </ResponsiveContainer>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
+                            <motion.div 
+                                whileHover={{ y: -4, boxShadow: '0 12px 24px rgba(0,0,0,0.1)' }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                                style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
                                 <h3 style={{ fontSize: '15px', fontWeight: '500', marginBottom: '16px', color: t.text, fontFamily: 'Syne' }}>
                                     Comparative Risks & Relational Dynamics
                                 </h3>
@@ -145,12 +147,15 @@ export default function RiskDashboard() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </motion.div>
 
                         </div>
 
                         <div style={{ width: '280px', flexShrink: 0 }}>
-                            <div style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
+                            <motion.div 
+                                whileHover={{ y: -4, boxShadow: '0 12px 24px rgba(0,0,0,0.1)' }}
+                                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                                style={{ background: t.bgCard, border: `1px solid ${t.border}`, borderRadius: '8px', padding: '20px' }}>
                                 <h3 style={{ fontSize: '15px', fontWeight: '500', marginBottom: '16px', color: t.text, fontFamily: 'Syne' }}>Regional Context</h3>
                                 <WorldMapSVG highlight={[primary, comparison]} />
 
@@ -184,7 +189,7 @@ export default function RiskDashboard() {
                                     </div>
                                 </div>
 
-                            </div>
+                            </motion.div>
                         </div>
 
                     </div>
@@ -193,8 +198,7 @@ export default function RiskDashboard() {
                         <CountryStatsTable />
                     </div>
                 </main>
-            </div>
             <StatusBar />
-        </div>
+        </DashboardLayout>
     );
 }
