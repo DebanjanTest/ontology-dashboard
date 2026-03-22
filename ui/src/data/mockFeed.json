@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1",
+        "timestamp": "09:42:15 UTC",
+        "source": "Satellite",
+        "headline": "New missile silo activity detected in region X",
+        "sentiment": "High",
+        "reliability": "95%",
+        "trend": "up"
+    },
+    {
+        "id": "2",
+        "timestamp": "09:40:30 UTC",
+        "source": "News",
+        "headline": "Oil prices surge amid trade talks breakdown",
+        "sentiment": "Neutral",
+        "reliability": "80%",
+        "trend": "flat"
+    },
+    {
+        "id": "3",
+        "timestamp": "09:38:12 UTC",
+        "source": "Social",
+        "headline": "Protests reported in capital city Y",
+        "sentiment": "Low",
+        "reliability": "70%",
+        "trend": "down"
+    },
+    {
+        "id": "4",
+        "timestamp": "09:36:00 UTC",
+        "source": "Diplomatic",
+        "headline": "Ambassador recalled from country Z",
+        "sentiment": "Critical",
+        "reliability": "98%",
+        "trend": "up"
+    },
+    {
+        "id": "5",
+        "timestamp": "09:34:45 UTC",
+        "source": "Satellite",
+        "headline": "Drought conditions worsen in key agricultural zone",
+        "sentiment": "Moderate",
+        "reliability": "85%",
+        "trend": "up"
+    },
+    {
+        "id": "6",
+        "timestamp": "09:32:22 UTC",
+        "source": "News",
+        "headline": "Cyberattack targets financial infrastructure",
+        "sentiment": "High",
+        "reliability": "90%",
+        "trend": "up"
+    },
+    {
+        "id": "7",
+        "timestamp": "09:30:15 UTC",
+        "source": "Diplomatic",
+        "headline": "New trade agreements drafted in summit",
+        "sentiment": "High",
+        "reliability": "95%",
+        "trend": "up"
+    },
+    {
+        "id": "8",
+        "timestamp": "09:28:30 UTC",
+        "source": "News",
+        "headline": "Tech sector faces new regulatory hurdles",
+        "sentiment": "Low",
+        "reliability": "80%",
+        "trend": "down"
+    },
+    {
+        "id": "9",
+        "timestamp": "09:26:12 UTC",
+        "source": "Social",
+        "headline": "Widespread internet outages across multiple cities",
+        "sentiment": "Low",
+        "reliability": "70%",
+        "trend": "down"
+    },
+    {
+        "id": "10",
+        "timestamp": "09:24:00 UTC",
+        "source": "Diplomatic",
+        "headline": "Joint military exercises announced for Q3",
+        "sentiment": "Moderate",
+        "reliability": "90%",
+        "trend": "up"
+    }
+]

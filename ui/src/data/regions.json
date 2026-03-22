@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Asia-Pacific",
+        "stability": 85,
+        "status": "High Instability",
+        "color": "#e63946"
+    },
+    {
+        "name": "Europe",
+        "stability": 45,
+        "status": "Stable",
+        "color": "#2a9d8f"
+    },
+    {
+        "name": "Middle East",
+        "stability": 70,
+        "status": "Moderate Risk",
+        "color": "#f4a261"
+    },
+    {
+        "name": "Americas",
+        "stability": 30,
+        "status": "Stable",
+        "color": "#2a9d8f"
+    }
+]

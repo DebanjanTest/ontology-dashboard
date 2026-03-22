@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "level": "High",
+        "color": "red",
+        "text": "Red: Increased naval activity in South China Sea"
+    },
+    {
+        "id": 2,
+        "level": "Medium",
+        "color": "orange",
+        "text": "Yellow: Cyber threat to European banking"
+    },
+    {
+        "id": 3,
+        "level": "Low",
+        "color": "blue",
+        "text": "Blue: Routine atmospheric observations"
+    }
+]

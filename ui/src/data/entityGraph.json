@@ -1,0 +1,354 @@
+{
+    "nodes": [
+        {
+            "id": "USA",
+            "type": "nation",
+            "risk": 45,
+            "size": 52,
+            "profile": "ALLIED-ALPHA1"
+        },
+        {
+            "id": "CHINA",
+            "type": "nation",
+            "risk": 88,
+            "size": 58,
+            "profile": "DENEL-LPGAR2"
+        },
+        {
+            "id": "RUSSIA",
+            "type": "nation",
+            "risk": 82,
+            "size": 50,
+            "profile": "POLAR-GRID7"
+        },
+        {
+            "id": "EU",
+            "type": "bloc",
+            "risk": 35,
+            "size": 42,
+            "profile": "EURO-COORD3"
+        },
+        {
+            "id": "NATO",
+            "type": "bloc",
+            "risk": 40,
+            "size": 42,
+            "profile": "SHIELD-NET4"
+        },
+        {
+            "id": "UN",
+            "type": "org",
+            "risk": 20,
+            "size": 36,
+            "profile": "GLOBAL-ORG1"
+        },
+        {
+            "id": "EU2",
+            "type": "bloc",
+            "risk": 32,
+            "size": 38,
+            "profile": "EURO-COORD4"
+        },
+        {
+            "id": "USA2",
+            "type": "nation",
+            "risk": 45,
+            "size": 38,
+            "profile": "ALLIED-ALPHA2"
+        },
+        {
+            "id": "CONFLICT",
+            "type": "event",
+            "risk": 90,
+            "size": 32,
+            "profile": "EVENT-CONF1"
+        },
+        {
+            "id": "UOM",
+            "type": "event",
+            "risk": 75,
+            "size": 34,
+            "profile": "EVENT-UOM1"
+        },
+        {
+            "id": "CYBER ATTACK1",
+            "type": "threat",
+            "risk": 85,
+            "size": 28,
+            "profile": "THREAT-CYB1"
+        },
+        {
+            "id": "CYBER ATTACK2",
+            "type": "threat",
+            "risk": 85,
+            "size": 28,
+            "profile": "THREAT-CYB2"
+        },
+        {
+            "id": "CYBER ATTACK3",
+            "type": "threat",
+            "risk": 85,
+            "size": 28,
+            "profile": "THREAT-CYB3"
+        },
+        {
+            "id": "CYBER IHCRENT",
+            "type": "threat",
+            "risk": 80,
+            "size": 26,
+            "profile": "THREAT-CYB4"
+        },
+        {
+            "id": "DIPLOMATIC",
+            "type": "event",
+            "risk": 25,
+            "size": 30,
+            "profile": "EVENT-DIP1"
+        },
+        {
+            "id": "TRADE DEAL",
+            "type": "event",
+            "risk": 30,
+            "size": 28,
+            "profile": "EVENT-TRD1"
+        },
+        {
+            "id": "POUCIMT",
+            "type": "event",
+            "risk": 40,
+            "size": 26,
+            "profile": "EVENT-POL1"
+        }
+    ],
+    "edges": [
+        {
+            "source": "USA",
+            "target": "NATO",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA",
+            "target": "EU",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA",
+            "target": "CHINA",
+            "type": "trade"
+        },
+        {
+            "source": "USA",
+            "target": "UN",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA",
+            "target": "DIPLOMATIC",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA",
+            "target": "EU2",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA",
+            "target": "USA2",
+            "type": "diplomatic"
+        },
+        {
+            "source": "CHINA",
+            "target": "RUSSIA",
+            "type": "trade"
+        },
+        {
+            "source": "CHINA",
+            "target": "EU",
+            "type": "trade"
+        },
+        {
+            "source": "CHINA",
+            "target": "NATO",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "UN",
+            "type": "trade"
+        },
+        {
+            "source": "CHINA",
+            "target": "CONFLICT",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "UOM",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "CYBER ATTACK1",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "CYBER ATTACK2",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "CYBER ATTACK3",
+            "type": "conflict"
+        },
+        {
+            "source": "CHINA",
+            "target": "CYBER IHCRENT",
+            "type": "conflict"
+        },
+        {
+            "source": "RUSSIA",
+            "target": "CONFLICT",
+            "type": "conflict"
+        },
+        {
+            "source": "EU",
+            "target": "NATO",
+            "type": "diplomatic"
+        },
+        {
+            "source": "UN",
+            "target": "EU2",
+            "type": "diplomatic"
+        },
+        {
+            "source": "USA2",
+            "target": "TRADE DEAL",
+            "type": "trade"
+        },
+        {
+            "source": "USA2",
+            "target": "CYBER ATTACK2",
+            "type": "conflict"
+        }
+    ],
+    "entityDetails": {
+        "CHINA": {
+            "riskRating": "CRITICAL",
+            "riskScore": 88,
+            "trend": "up",
+            "scorecard": [
+                {
+                    "label": "Economy",
+                    "score": 85,
+                    "level": "High Risk",
+                    "color": "#f4a261"
+                },
+                {
+                    "label": "Security",
+                    "score": 92,
+                    "level": "Critical",
+                    "color": "#e63946"
+                },
+                {
+                    "label": "Climate",
+                    "score": 40,
+                    "level": "Moderate",
+                    "color": "#2a9d8f"
+                }
+            ],
+            "activities": [
+                {
+                    "label": "Border Mobilization",
+                    "icon": "pin"
+                },
+                {
+                    "label": "Tech Sanctions",
+                    "icon": "signal"
+                },
+                {
+                    "label": "Naval Drill",
+                    "icon": "lock"
+                }
+            ]
+        },
+        "USA": {
+            "riskRating": "MODERATE",
+            "riskScore": 45,
+            "trend": "stable",
+            "scorecard": [
+                {
+                    "label": "Economy",
+                    "score": 72,
+                    "level": "Moderate",
+                    "color": "#f4a261"
+                },
+                {
+                    "label": "Security",
+                    "score": 55,
+                    "level": "Elevated",
+                    "color": "#f4a261"
+                },
+                {
+                    "label": "Climate",
+                    "score": 38,
+                    "level": "Moderate",
+                    "color": "#2a9d8f"
+                }
+            ],
+            "activities": [
+                {
+                    "label": "Sanctions Review",
+                    "icon": "pin"
+                },
+                {
+                    "label": "Trade Negotiations",
+                    "icon": "signal"
+                },
+                {
+                    "label": "Defense Briefing",
+                    "icon": "lock"
+                }
+            ]
+        },
+        "RUSSIA": {
+            "riskRating": "HIGH",
+            "riskScore": 82,
+            "trend": "up",
+            "scorecard": [
+                {
+                    "label": "Economy",
+                    "score": 68,
+                    "level": "High Risk",
+                    "color": "#f4a261"
+                },
+                {
+                    "label": "Security",
+                    "score": 88,
+                    "level": "Critical",
+                    "color": "#e63946"
+                },
+                {
+                    "label": "Climate",
+                    "score": 35,
+                    "level": "Moderate",
+                    "color": "#2a9d8f"
+                }
+            ],
+            "activities": [
+                {
+                    "label": "Troop Movement",
+                    "icon": "pin"
+                },
+                {
+                    "label": "Energy Leverage",
+                    "icon": "signal"
+                },
+                {
+                    "label": "Cyber Operations",
+                    "icon": "lock"
+                }
+            ]
+        }
+    }
+}

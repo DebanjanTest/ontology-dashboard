@@ -1,0 +1,76 @@
+{
+    "lastUpdate": "04:00 UTC",
+    "domains": [
+        {
+            "id": "economics",
+            "label": "ECONOMICS",
+            "title": "FINANCIAL VOLATILITY",
+            "score": 82,
+            "scoreLabel": "CRITICAL INDEX",
+            "color": "#0258d4",
+            "barData": [40, 55, 50, 60, 70, 65, 82],
+            "events": [
+                "Central Bank Rate Pivot",
+                "Trade Corridor Disruption",
+                "Debt Default Warning - Region A"
+            ]
+        },
+        {
+            "id": "geopolitics",
+            "label": "GEOPOLITICS",
+            "title": "SOVEREIGN INTEGRITY",
+            "score": 94,
+            "scoreLabel": "ALARM THRESHOLD",
+            "color": "#dc2626",
+            "barData": [80, 75, 70, 60, 55, 50, 45],
+            "events": [
+                "Territorial Waters Violation",
+                "Cyber Warfare Campaign",
+                "Proxy Conflict Escalation"
+            ]
+        },
+        {
+            "id": "defense",
+            "label": "DEFENSE",
+            "title": "TACTICAL READINESS",
+            "score": 41,
+            "scoreLabel": "OPERATIONAL STATUS",
+            "color": "#0258d4",
+            "barData": [30, 35, 25, 40, 38, 32, 41],
+            "events": [
+                "Supply Chain Logistics Delay",
+                "Personnel Training Deficit",
+                "Equipment Modernization Lag"
+            ]
+        },
+        {
+            "id": "technology",
+            "label": "TECHNOLOGY",
+            "title": "SYSTEMS INTEGRITY",
+            "score": 58,
+            "scoreLabel": "RELIABILITY SCORE",
+            "color": "#0258d4",
+            "barData": [45, 50, 55, 48, 52, 58, 56],
+            "events": [
+                "Cloud Infrastructure Outage",
+                "Silicon Shortage Forecast",
+                "AI Model Drift Detected"
+            ]
+        }
+    ],
+    "graphNodes": [
+        { "id": "alpha-9", "label": "NODE: ALPHA-9", "x": 15, "y": 20, "status": "alert" },
+        { "id": "sigma-4", "label": "NODE: SIGMA-4", "x": 75, "y": 20, "status": "normal" },
+        { "id": "gamma-1", "label": "NODE: GAMMA-1", "x": 15, "y": 70, "status": "alert" },
+        { "id": "beta-2", "label": "NODE: BETA-2", "x": 75, "y": 70, "status": "normal" }
+    ],
+    "strategicOutlook": {
+        "summary": "Cross-domain synthesis indicates a heightened state of alert for the next 72 hours. Convergence of Economic volatility and Geopolitical tension exceeds normal thresholds.",
+        "confidence": 92.4,
+        "insights": [
+            { "icon": "trending", "label": "ASCENDING THREAT", "value": "Resource Scarcity" },
+            { "icon": "globe", "label": "GEOGRAPHICAL FOCAL POINT", "value": "Suez Corridor" },
+            { "icon": "shield", "label": "MITIGATION PROTOCOL", "value": "Divergent Route 4" }
+        ]
+    }
+}

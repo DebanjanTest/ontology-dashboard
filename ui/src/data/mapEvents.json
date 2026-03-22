@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "type": "conflict",
+        "lat": 34.0,
+        "lng": 76.0,
+        "label": "Conflict:",
+        "desc": "Border clash in Kashmir"
+    },
+    {
+        "id": 2,
+        "type": "diplomatic",
+        "lat": 39.9,
+        "lng": 116.4,
+        "label": "Diplomatic Talk:",
+        "desc": "US-China trade discussion in Beijing"
+    },
+    {
+        "id": 3,
+        "type": "diplomatic",
+        "lat": 38.9,
+        "lng": -77.0,
+        "label": "Diplomatic Talk:",
+        "desc": "Washington Summit"
+    },
+    {
+        "id": 4,
+        "type": "conflict",
+        "lat": 15.5,
+        "lng": 32.5,
+        "label": "Conflict:",
+        "desc": "Regional tensions"
+    },
+    {
+        "id": 5,
+        "type": "conflict",
+        "lat": 25.2,
+        "lng": 45.0,
+        "label": "Conflict:",
+        "desc": "Middle East unrest"
+    },
+    {
+        "id": 6,
+        "type": "disaster",
+        "lat": 13.0,
+        "lng": 122.0,
+        "label": "Natural Disaster:",
+        "desc": "Typhoon near Philippines"
+    },
+    {
+        "id": 7,
+        "type": "diplomatic",
+        "lat": 35.6,
+        "lng": 139.7,
+        "label": "Diplomatic Talk:",
+        "desc": "Japan-Korea talks"
+    },
+    {
+        "id": 8,
+        "type": "conflict",
+        "lat": 50.4,
+        "lng": 30.5,
+        "label": "Conflict:",
+        "desc": "Eastern Europe"
+    }
+]

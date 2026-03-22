@@ -1,0 +1,50 @@
+[
+    {
+        "month": "Jan",
+        "conflict": 15,
+        "diplomacy": 20,
+        "disaster": 10
+    },
+    {
+        "month": "Feb",
+        "conflict": 20,
+        "diplomacy": 22,
+        "disaster": 12
+    },
+    {
+        "month": "Mar",
+        "conflict": 25,
+        "diplomacy": 28,
+        "disaster": 15
+    },
+    {
+        "month": "Apr",
+        "conflict": 35,
+        "diplomacy": 32,
+        "disaster": 20
+    },
+    {
+        "month": "May",
+        "conflict": 45,
+        "diplomacy": 38,
+        "disaster": 28
+    },
+    {
+        "month": "Jun",
+        "conflict": 50,
+        "diplomacy": 42,
+        "disaster": 35
+    },
+    {
+        "month": "Jul",
+        "conflict": 60,
+        "diplomacy": 48,
+        "disaster": 38
+    },
+    {
+        "month": "Aug",
+        "conflict": 75,
+        "diplomacy": 55,
+        "disaster": 42
+    }
+]

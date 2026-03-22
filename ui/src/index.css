@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #f0f2f5;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-input: #f9fafb;
+    --bg-hover: #f8fafc;
+    --accent-teal: #2a9d8f;
+    --accent-red: #e63946;
+    --accent-orange: #f4a261;
+    --accent-yellow: #f9c74f;
+    --text-primary: #1a1a2e;
+    --text-secondary: #334155;
+    --text-muted: #6b7280;
+    --text-faint: #94a3b8;
+    --border: #e5e7eb;
+    --border-light: #f1f5f9;
+    --alert-high-bg: #fde8e8;
+    --alert-high-border: #e63946;
+    --alert-medium-bg: #fff3e0;
+    --alert-medium-border: #f4a261;
+    --alert-low-bg: #e8f4fd;
+    --alert-low-border: #3b82f6;
+    --stability-bar: #2a9d8f;
+    --risk-bar: #2a9d8f;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark-theme {
+    --bg-main: #0a0e1a;
+    --bg-sidebar: #0f1520;
+    --bg-card: #111827;
+    --bg-input: #0f172a;
+    --bg-hover: #1e293b;
+    --accent-red: #f87171;
+    --accent-orange: #fbbf24;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-faint: #475569;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.04);
+    --alert-high-bg: rgba(248, 113, 113, 0.1);
+    --alert-high-border: #f87171;
+    --alert-medium-bg: rgba(251, 191, 36, 0.1);
+    --alert-medium-border: #fbbf24;
+    --alert-low-bg: rgba(96, 165, 250, 0.1);
+    --alert-low-border: #60a5fa;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Syne', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 180px;
+  min-width: 180px;
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: 'Syne', sans-serif;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navItem:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.navItem.active {
+  border-left: 3px solid var(--accent-teal);
+  color: var(--text-primary);
+  background: var(--bg-hover);
+  font-weight: 500;
+}
+
+.navIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.dashboard-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.top-widgets {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.map-container {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.detail-panel {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.bottom-widgets {
+  display: flex;
+  height: 280px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--bg-card);
+  overflow: hidden;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.bottomCard {
+  flex: 1;
+  padding: 14px 16px;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}

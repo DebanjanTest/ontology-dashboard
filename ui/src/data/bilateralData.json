@@ -1,0 +1,110 @@
+{
+    "countries": [
+        "India",
+        "USA",
+        "China",
+        "Russia",
+        "UK",
+        "Germany",
+        "Japan",
+        "Brazil"
+    ],
+    "sectorData": {
+        "India-USA": {
+            "Economy": {
+                "primary": 72,
+                "comparison": 55,
+                "global": 43
+            },
+            "Sovereignty": {
+                "primary": 78,
+                "comparison": 55,
+                "global": 88
+            },
+            "Infrastructure": {
+                "primary": 61,
+                "comparison": 61,
+                "global": 77
+            },
+            "Defense": {
+                "primary": 34,
+                "comparison": 34,
+                "global": 34
+            },
+            "Technology": {
+                "primary": 58,
+                "comparison": 58,
+                "global": 66
+            },
+            "Society": {
+                "primary": 58,
+                "comparison": 58,
+                "global": 68
+            }
+        },
+        "India-China": {
+            "Economy": {
+                "primary": 72,
+                "comparison": 88,
+                "global": 43
+            },
+            "Sovereignty": {
+                "primary": 78,
+                "comparison": 92,
+                "global": 88
+            },
+            "Infrastructure": {
+                "primary": 61,
+                "comparison": 85,
+                "global": 77
+            },
+            "Defense": {
+                "primary": 34,
+                "comparison": 78,
+                "global": 34
+            },
+            "Technology": {
+                "primary": 58,
+                "comparison": 82,
+                "global": 66
+            },
+            "Society": {
+                "primary": 58,
+                "comparison": 71,
+                "global": 68
+            }
+        }
+    },
+    "stabilityScores": {
+        "India": {
+            "stability": 65,
+            "momentum": 78
+        },
+        "USA": {
+            "stability": 75,
+            "momentum": 82
+        },
+        "China": {
+            "stability": 70,
+            "momentum": 85
+        },
+        "Russia": {
+            "stability": 45,
+            "momentum": 55
+        }
+    },
+    "regionalInsights": {
+        "India-USA": [
+            "USA's economy scores lower than India in this metric.",
+            "Sovereignty risks are comparable between both nations.",
+            "Technological competition is a key area of relational dynamic.",
+            "Infrastructure remains a shared area of strategic investment."
+        ],
+        "India-China": [
+            "China significantly outscores India in Defense readiness.",
+            "Infrastructure investment is a major competitive zone.",
+            "Sovereignty tensions remain critically elevated.",
+            "Technology gap is widening in China's favor."
+        ]
+    }
+}
