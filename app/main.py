@@ -27,7 +27,16 @@ except Exception:
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./ontology.db")
+# Vercel Postgres sets POSTGRES_URL by default, fallback to DATABASE_URL, then local SQLite
+raw_db_url = os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./ontology.db")
+
+# Force the asyncpg driver for PostgreSQL to ensure SQLAlchemy async compatibility
+if raw_db_url.startswith("postgres://"):
+    DATABASE_URL = raw_db_url.replace("postgres://", "postgresql+asyncpg://", 1)
+elif raw_db_url.startswith("postgresql://"):
+    DATABASE_URL = raw_db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+else:
+    DATABASE_URL = raw_db_url
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
